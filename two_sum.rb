@@ -9,15 +9,16 @@ def two_sum(nums, target)
 end
 
 nums_input = []
+print "how many num ?: "
+num_count = $stdin.gets.chomp.to_i
+c = 0
 
-while true
+loop do
   print "enter nums: "
-  num = $stdin.gets.chomp
-  if num == "end"
-    break
-  else
-    nums_input.push(num.to_i)
-  end
+  num = $stdin.gets.chomp.to_i
+  nums_input.push(num)
+  c += 1
+  break unless c < num_count
 end
 
 print "enter target: "
